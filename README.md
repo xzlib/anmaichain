@@ -17,7 +17,7 @@ sudo yum install leveldb-devel sqlite-devel
 
 On Windows, use the [Bhp version of LevelDB](https://github.com/BhpAlpha/bhp-leveldb).
 
-## Run BHP-CLI on Linux
+## Run AMC-CLI on Linux
 It is recommended to install tmux on Linux.
 tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, 
 detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more 
@@ -44,21 +44,21 @@ tmux a -t 1
 
 ## Download release binaries
 
-Download and unzip [latest release](https://github.com/anmaichain/amc-cli/releases).
+Download and unzip [latest release](https://github.com/xzlib/anmaichain/releases/tag/1.0.0).
 
 ```sh
-dotnet bhp-cli.dll
+dotnet amc-cli.dll
 ```
 ## Download plugins release binaries
 Move wallet rpc to rpcwallet plugin after v1.2.0.6
 
 ```sh
-Download the same version and unzip [latest release](https://github.com/BhpAlpha/bhp-plugins/releases).
+Download the same version and unzip [latest release](https://github.com/xzlib/anmaichain/releases/tag/1.0.0).
 ```
  
 
 ```sh
-cd bhp-cli
+cd amc-cli
 dotnet restore
 dotnet publish -c Release
 ```
@@ -66,4 +66,4 @@ In order to run, you need .NET Core. Download the SDK [binary](https://www.micro
 
 ## Logging
 
-To enable logs in bhp-cli, you need to add the ApplicationLogs plugin. Please check [here](https://github.com/BhpAlpha/bhp-plugins) for more information.
+To enable logs in amc-cli, you need to add the ApplicationLogs plugin. Please check [here](https://github.com/BhpAlpha/bhp-plugins) for more information.
