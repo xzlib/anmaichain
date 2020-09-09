@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "amc-cli": {
+      "commandName": "Project"
+    }
+  }
+}

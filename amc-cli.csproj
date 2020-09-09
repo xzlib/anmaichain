@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Copyright>2019-2020 The Amc Project</Copyright>
+    <AssemblyTitle>Bhp.CLI</AssemblyTitle>
+    <Version>1.0.0.1</Version>
+    <Authors>The Amc Project</Authors>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>amc-cli</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>Amc.CLI</PackageId>
+    <RootNamespace>Amc</RootNamespace>
+    <Company>The Amc Project</Company>
+    <Product>Amc.CLI</Product>
+    <Description>Amc.CLI</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>False</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="config.json;config.mainnet.json;config.testnet.json;protocol.json;protocol.mainnet.json;protocol.testnet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\bhp\bhp\bhp.csproj" />
+  </ItemGroup>
+
+</Project>
